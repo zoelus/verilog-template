@@ -17,10 +17,13 @@ module tt_um_test_zoelus (
     input  wire       rst_n     // reset_n - low to reset
 );
 
+// IOs are bidirectional pins on the chip
+    // can only change this section of this file
+    
   // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
-  assign uio_out = 0;
-  assign uio_oe  = 0;
+  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in 
+  assign uio_out = 0; 
+    assign uio_oe  = 0; // e is for enable, enabling o (output) enable output for io pin
 
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
