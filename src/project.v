@@ -5,6 +5,7 @@
 
 `default_nettype none
 
+// need to change module name depending on what is written in the info.yaml file
 module tt_um_test_zoelus (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
