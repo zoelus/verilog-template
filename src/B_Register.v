@@ -7,8 +7,9 @@ module B_register(
   
   reg [7:0] Bus_latch;
 
-  // if clr is pushed restart the values when clk goes to posedge
-  // or if BIb is 0, then pass on the value of bus
+  // if clr is pushed, restart the values when clk goes to posedge
+  // or if BIb is 0, then store the value of bus
+  // or else, keep storing the previous Bus_latch value
   always @ (posedge clk) begin
     if (clr) begin
       Bus_latch <= 8'b0;
